@@ -8,7 +8,7 @@ This project focuses on programmatic remediation of security vulnerabilities in 
 
 ## Tools & Technologies
 - **Microsoft Azure** (Virtual Machine Provisioning)
-- **Tenable Vulnerability Management** (Authenticated Scanning)
+- **Tenable Vulnerability Management** (Authenticated Scans)
 - **Bash Scripts** (Automated Remediation)
 
 ## Objectives
@@ -24,8 +24,6 @@ This project focuses on programmatic remediation of security vulnerabilities in 
 
 ### Step 1: Provision a Linux Server (Ubuntu 22.04) VM
 1. Create a new Virtual Machine (VM) on **Microsoft Azure** with Linux Server (Ubuntu 22.04) as the OS.
-2. Ensure **Tenable** has proper credentials to perform an authenticated scan.
-
 --------
 ### Step 2: Create an Authenticated Scan in Tenable
 1. Create an **Authenticated Scan** using the **Windows 10 DISA STIG** template to scan the VM for vulnerabilities.
@@ -57,7 +55,7 @@ Run a **Authenticated Scan** on the **Azure VM** using Tenable to capture the st
 ## Remediation Process
 
 ### Step 5: Automate Vulnerability Remediation
-To **programmatically remediate vulnerabilities**, we wrote **Bash scripts** that automate the removal of insecure configurations.
+To simulate real-world remediation in large environments, I created bash scripts to automate vulnerability remediation. The goal is to remove bad configurations automatically, without manual intervention, while testing the scripts in a sandbox environment first.
 
 1. **Remove Telnet (Insecure Protocol)**
    - [View Script](https://github.com/cybererik/Programmatic-Remediation-in-Linux/blob/main/remediation-Telnet-Remove.sh)
@@ -67,10 +65,7 @@ To **programmatically remediate vulnerabilities**, we wrote **Bash scripts** tha
 
 3. **Upgrade OpenSSL to a Secure Version**
    - [View Script](https://github.com/cybererik/Programmatic-Remediation-in-Linux/blob/main/remediation-openssl-update.sh)
-
-Each script ensures that vulnerabilities are mitigated **without manual intervention**.
-
----
+------
 ## Testing & Verification
 After running the scan post-remediation, compare the results with the previous scan to evaluate the effectiveness of the automated remediation. Successful remediation should show a reduction in the number of critical vulnerabilities, and the system should now meet security compliance standards.
 
