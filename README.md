@@ -3,8 +3,7 @@
 ![Introduction_Vulnerability Management Lab Overview](https://github.com/user-attachments/assets/395f93a3-db26-46b4-b8b3-de1d8514e576)
 
 ## Overview
-This project focuses on programmatic remediation of security vulnerabilities in a Linux Server (Ubuntu 22.04) virtual machine. By leveraging tools like Microsoft Azure and Tenable, we provisioned a VM, performed authenticated vulnerability scans using the DISA STIG template, and automated the remediation process using bash scripts. This project simulates the actions a cybersecurity analyst would take to resolve vulnerabilities in an enterprise environment.
-
+This project focuses on programmatic remediation of security vulnerabilities in a Linux Server (Ubuntu 22.04) virtual machine (VM). By leveraging tools like Microsoft Azure and Tenable, we provisioned a VM, performed authenticated vulnerability scans using the DISA STIG template, and automated the remediation process using PowerShell scripts. This project simulates the actions a cybersecurity analyst would take to resolve vulnerabilities in an enterprise environment.
 
 ## Tools & Technologies
 - **Microsoft Azure** (Virtual Machine Provisioning)
