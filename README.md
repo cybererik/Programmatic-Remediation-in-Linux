@@ -13,7 +13,7 @@ This project focuses on programmatic remediation of security vulnerabilities in 
 ## Objective(s)
 - Provision a Linux Server (Ubuntu 22.04) VM on Microsoft Azure.
 - Run an authenticated vulnerability scan using Tenable Enterprise with the DISA STIG template.
-- Simulate vulnerability creation (e.g., outdated software, insecure protocols).
+- Simulate vulnerability creation (e.g., insecure protocols, insecure configurations).
 - Remediate vulnerabilities programmatically using scripts.
 - Re-run authenticated scans to verify remediation success.
 
@@ -23,7 +23,7 @@ This project focuses on programmatic remediation of security vulnerabilities in 
 1. Create a new Virtual Machine (VM) on **Microsoft Azure** with Linux Server (Ubuntu 22.04) as the OS.
 ---
 ### Step 2: Create an Authenticated Scan in Tenable
-1. Create an **Authenticated Scan** using the **Windows 10 DISA STIG** template to scan the VM for vulnerabilities.
+1. Create an **Authenticated Scan** using the **Linux DISA STIG** template to scan the VM for vulnerabilities.
 
 #### What is DISA STIG?
 **DISA STIG (Defense Information Systems Agency Security Technical Implementation Guide)** provides configuration guidelines to harden IT systems and enforce cybersecurity compliance, mainly for the Department of Defense (DoD).
@@ -32,9 +32,14 @@ This project focuses on programmatic remediation of security vulnerabilities in 
 ----
 ### Step 3: Manually Introduce Vulnerabilities
 To simulate common vulnerabilities, we manually introduced several issues:
-1. **Old Version of Firefox** (Insecure Software)
-   - [Vulnerability Link](https://drive.google.com/drive/u/6/folders/1y1pSHgkpWpgDTDkYmV4bZDZtiPP6i-GA)
+1. **Installed Telnet** (Insecure protocol)
+   - [Script Link](https://github.com/cybererik/Programmatic-Remediation-in-Linux/blob/main/SCRIPT%3A%20Install%20and%20Start%20Telnet)
 
+2. **Set Root Account Password as Root** (Insecure configuration)
+   - [Script Link](https://github.com/cybererik/Programmatic-Remediation-in-Linux/blob/main/SCRIPT%3A%20Enable%20Password%20as%20Root)
+
+3. **Default OpenSSL** (xxxxx)
+ - [Script Link](https://github.com/cybererik/Programmatic-Remediation-in-Linux/blob/main/SCRIPT%3A%20Enable%20Password%20as%20Root)
 
 ----
 ### Step 4: Run Authenticated Scan
@@ -43,16 +48,20 @@ Run a **Authenticated Scan** on the **Azure VM** using Tenable to capture the st
 ![Inistal scan Linux](https://github.com/user-attachments/assets/928551b2-6af9-4c5a-9f8b-1dadfab06499)
 
 
-
 -----
 ## Remediation Step
 
-### Step 5: Created PowerShell Scripts for Programmatic Remediation
-To simulate real-world remediation in large environments, I wrote PowerShell scripts to automate vulnerability remediation. The goal is to remove bad configurations automatically, without manual intervention, while testing the scripts in a sandbox environment first.
+### Step 5: Created Scripts for Programmatic Remediation
+To simulate real-world remediation in large environments, I wrote scripts to automate vulnerability remediation. The goal is to remove bad configurations automatically, without manual intervention, while testing the scripts in a sandbox environment first.
 
-1. **Uninstall Old Version of Firefox**: 
-   - [PowerShell Script - Firefox Uninstall](https://github.com/cybererik/Programmatic-Remediation-in-Windows/blob/main/remediation-FireFox-uninstall.ps1)
-   
+1. **Remediate Telnet:**: 
+   - [Script Link](https://github.com/joshmadakor1/lognpacific-public/blob/main/automation/remediation-Telnet-Remove.sh)
+
+2. **Remediate Default Root Password:**: 
+   - [Script Link](https://github.com/joshmadakor1/lognpacific-public/blob/main/automation/remediation-root-password.sh)
+
+3. **Remediate OpenSSL:**: 
+   - [Script Link](https://github.com/joshmadakor1/lognpacific-public/blob/main/automation/remediation-openssl-3.0.5-install.sh)
 
 
 ## Testing & Verification
