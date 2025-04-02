@@ -21,7 +21,7 @@ sudo systemctl status inetd.service # Verifies that the inetd service is running
 
 How to use:
 # Download the script
-# wget https://raw.githubusercontent.com/joshmadakor1/lognpacific-public/main/automation/remediation-root-password.sh --no-check-certificate
+# wget https://raw.githubusercontent.com/cybererik/Programmatic-Remediation-in-Linux/refs/heads/main/SCRIPT%3A%20Install%20and%20Start%20Telnet
 
 # Make the script executable:
 # chmod +x install_telnet.sh
