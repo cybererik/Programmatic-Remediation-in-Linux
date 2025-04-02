@@ -3,7 +3,7 @@
 ![Introduction_Vulnerability Management Lab Overview](https://github.com/user-attachments/assets/395f93a3-db26-46b4-b8b3-de1d8514e576)
 
 ## Overview
-This project focuses on programmatic remediation of security vulnerabilities in a Linux Server (Ubuntu 22.04) virtual machine (VM). By leveraging tools like Microsoft Azure and Tenable, we provisioned a VM, performed authenticated vulnerability scans using the DISA STIG template, and automated the remediation process using PowerShell scripts. This project simulates the actions a cybersecurity analyst would take to resolve vulnerabilities in an enterprise environment.
+This project focuses on programmatic remediation of security vulnerabilities in a Linux Server (Ubuntu 22.04) virtual machine. By leveraging tools like Microsoft Azure and Tenable, we provisioned a VM, performed authenticated vulnerability scans using the DISA STIG template, and automated the remediation process using scripts. This project simulates the actions a cybersecurity analyst would take to resolve vulnerabilities in an enterprise environment.
 
 ## Tools & Technologies
 - **Microsoft Azure** (Virtual Machine)
@@ -34,14 +34,16 @@ This project focuses on programmatic remediation of security vulnerabilities in 
 To simulate common vulnerabilities, we manually introduced several issues:
 1. **Old Version of Firefox** (Insecure Software)
    - [Vulnerability Link](https://drive.google.com/drive/u/6/folders/1y1pSHgkpWpgDTDkYmV4bZDZtiPP6i-GA)
-2. **Enable SMBv1:** EternalBlue exploits a vulnerability in the SMBv1 protocol, which is used for file sharing and network communication in Windows. By sending specially crafted packets to a vulnerable system, it allows an attacker to execute arbitrary code remotely, enabling them to take control of the system without requiring user interaction.
-3. **Enable Discouraged Cryptographic Protocols** (SSL 2.0, SSL 3.0, TLS 1.0, TLS 1.1)
-   - [PowerShell Script for Protocols](https://github.com/cybererik/Programmatic-Remediation-in-Windows/blob/main/Enable%20bad%20protocols.ps1)
+
+
 ----
 ### Step 4: Run Authenticated Scan
 Run a **Authenticated Scan** on the **Azure VM** using Tenable to capture the state of the vulnerabilities. This provides a baseline before remediation.
 
-![First scan Screenshot 2025-03-28 015853](https://github.com/user-attachments/assets/6ba618a8-d7bb-4880-b921-82d3104dae73)
+![Inistal scan Linux](https://github.com/user-attachments/assets/928551b2-6af9-4c5a-9f8b-1dadfab06499)
+
+
+
 -----
 ## Remediation Step
 
@@ -51,16 +53,13 @@ To simulate real-world remediation in large environments, I wrote PowerShell scr
 1. **Uninstall Old Version of Firefox**: 
    - [PowerShell Script - Firefox Uninstall](https://github.com/cybererik/Programmatic-Remediation-in-Windows/blob/main/remediation-FireFox-uninstall.ps1)
    
-2. **Disable SMBv1**: 
-   - [PowerShell Script - SMBv1 Disable](https://github.com/cybererik/Programmatic-Remediation-in-Windows/blob/main/remediation-SMBv1.ps1)
-   
-3. **Disable Insecure Cryptographic Protocols**:
-   - [PowerShell Script - Disable Protocols](https://github.com/cybererik/Programmatic-Remediation-in-Windows/blob/main/toggle-protocols.ps1)
+
 
 ## Testing & Verification
 After running the scan post-remediation, compare the results with the previous scan to evaluate the effectiveness of the automated remediation. Successful remediation should show a reduction in the number of critical vulnerabilities, and the system should now meet security compliance standards.
 
-![Screenshot 2025-03-28 231513](https://github.com/user-attachments/assets/34ba6029-0794-4fb7-8132-3f860a7bbdaa)
+![SECOND SCAN Screenshot 2025-04-01 223115](https://github.com/user-attachments/assets/859d6d97-92c3-4629-8724-843aa1e61fdb)
+
 
 ## Conclusion
 In this project, we simulated a real-world remediation process by leveraging tools like Tenable Enterprise and PowerShell. By automating the remediation of vulnerabilities, we demonstrated the importance of efficient, scalable solutions for managing system security. Future improvements could include extending the scripts to handle more vulnerabilities or integrating this process into a Continuous Integration/Continuous Deployment (CI/CD) pipeline for automated security compliance checks.
