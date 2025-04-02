@@ -26,7 +26,7 @@ This project focuses on programmatic remediation of security vulnerabilities in 
 1. Create a new Virtual Machine (VM) on **Microsoft Azure** with Linux Server (Ubuntu 22.04) as the OS.
 --------
 ### Step 2: Create an Authenticated Scan in Tenable
-1. Create an **Authenticated Scan** using the **Windows 10 DISA STIG** template to scan the VM for vulnerabilities.
+1. Create an **Authenticated Scan** using the **Linux 10 DISA STIG** template to scan the VM for vulnerabilities.
 
 #### What is DISA STIG?
 **DISA STIG (Defense Information Systems Agency Security Technical Implementation Guide)** provides configuration guidelines to harden IT systems and enforce cybersecurity compliance, mainly for the Department of Defense (DoD).
