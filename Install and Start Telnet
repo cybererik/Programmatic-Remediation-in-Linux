@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Author: Erik Vargas
+# This script installs and starts the Telnet service (an insecure application) on a Linux system.
+
+# Step 1: Update package list to ensure the latest versions of packages are installed
+sudo apt update # Updates package index to ensure latest versions of packages are available.
+
+# Step 2: Install the Telnet daemon (telnetd) package
+sudo apt install telnetd -y # Installs the telnetd package, enabling Telnet service.
+
+# Step 3: Enable the inetd service so that it starts on boot
+sudo systemctl enable inetd.service # Enables the inetd service to start on boot, managing Telnet connections.
+
+# Step 4: Start the inetd service to allow Telnet connections
+sudo systemctl start inetd.service # Starts the inetd service immediately, enabling Telnet functionality.
+
+# Step 5: Check the status of the inetd service to confirm it's running
+sudo systemctl status inetd.service # Verifies that the inetd service is running and accepting Telnet connections.
+
+
+How to use:
+# Download the script
+# wget https://raw.githubusercontent.com/joshmadakor1/lognpacific-public/main/automation/remediation-root-password.sh --no-check-certificate
+
+# Make the script executable:
+# chmod +x install_telnet.sh
+
+# Execute the script:
+# sudo ./install_telnet.sh
