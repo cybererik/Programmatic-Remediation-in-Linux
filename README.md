@@ -3,24 +3,24 @@
 ![Introduction_Vulnerability Management Lab Overview](https://github.com/user-attachments/assets/395f93a3-db26-46b4-b8b3-de1d8514e576)
 
 ## Overview
-This project focuses on programmatic remediation of security vulnerabilities in a Windows 10 virtual machine (VM). By leveraging tools like Microsoft Azure and Tenable, we provisioned a VM, performed authenticated vulnerability scans using the DISA STIG template, and automated the remediation process using PowerShell scripts. This project simulates the actions a cybersecurity analyst would take to resolve vulnerabilities in an enterprise environment.
+This project focuses on programmatic remediation of security vulnerabilities in a Linux Server (Ubuntu 22.04) virtual machine (VM). By leveraging tools like Microsoft Azure and Tenable, we provisioned a VM, performed authenticated vulnerability scans using the DISA STIG template, and automated the remediation process using PowerShell scripts. This project simulates the actions a cybersecurity analyst would take to resolve vulnerabilities in an enterprise environment.
 
 ## Tools & Technologies
 - **Microsoft Azure** (Virtual Machine)
 - **Tenable Vulnerability Management Platform** (Authenticated Scans)
-- **PowerShell** (Automated Remediation Scripts)
+- **Scripts** (Automated Remediation Scripts)
 
 ## Objective(s)
-- Provision a Windows 10 Pro VM on Microsoft Azure.
+- Provision a Linux Server (Ubuntu 22.04) VM on Microsoft Azure.
 - Run an authenticated vulnerability scan using Tenable Enterprise with the DISA STIG template.
 - Simulate vulnerability creation (e.g., outdated software, insecure protocols).
-- Remediate vulnerabilities programmatically using PowerShell scripts.
+- Remediate vulnerabilities programmatically using scripts.
 - Re-run authenticated scans to verify remediation success.
 
 ## Project Overview 
 
-### Step 1: Provision a Windows 10 Pro VM
-1. Create a new Virtual Machine (VM) on **Microsoft Azure** with Windows 10 Pro as the OS.
+### Step 1: Provision a Linux Server (Ubuntu 22.04)
+1. Create a new Virtual Machine (VM) on **Microsoft Azure** with Linux Server (Ubuntu 22.04) as the OS.
 ---
 ### Step 2: Create an Authenticated Scan in Tenable
 1. Create an **Authenticated Scan** using the **Windows 10 DISA STIG** template to scan the VM for vulnerabilities.
