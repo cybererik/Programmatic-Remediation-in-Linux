@@ -12,7 +12,7 @@ This project focuses on programmatic remediation of security vulnerabilities in 
 
 ## Objective(s)
 - Provision a Linux Server (Ubuntu 22.04) VM on Microsoft Azure.
-- Run an authenticated vulnerability scan using Tenable Enterprise with the DISA STIG template.
+- Run an authenticated vulnerability scan using Tenable with the DISA STIG template.
 - Simulate vulnerability creation (e.g., insecure protocols, insecure configurations).
 - Remediate vulnerabilities programmatically using scripts.
 - Re-run authenticated scans to verify remediation success.
