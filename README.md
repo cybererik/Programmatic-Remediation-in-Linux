@@ -16,12 +16,12 @@ This project focuses on programmatic remediation of security vulnerabilities in 
 - Simulate vulnerability creation (e.g., insecure protocols, insecure configurations).
 - Remediate vulnerabilities programmatically using scripts.
 - Re-run authenticated scans to verify remediation success.
-
+----
 ## Project Overview 
 
 ### Step 1: Provision a Linux Server (Ubuntu 22.04)
 1. Create a new Virtual Machine (VM) on **Microsoft Azure** with Linux Server (Ubuntu 22.04) as the OS.
----
+----
 ### Step 2: Create an Authenticated Scan in Tenable
 1. Create an **Authenticated Scan** using the **Linux DISA STIG** template to scan the VM for vulnerabilities.
 
@@ -29,7 +29,9 @@ This project focuses on programmatic remediation of security vulnerabilities in 
 **DISA STIG (Defense Information Systems Agency Security Technical Implementation Guide)** provides configuration guidelines to harden IT systems and enforce cybersecurity compliance, mainly for the Department of Defense (DoD).
 
 ![Screenshot 2025-03-28 005022](https://github.com/user-attachments/assets/ff5880f7-944a-4142-82c3-5d51626098c8)
-----
+
+------
+
 ### Step 3: Manually Introduce Vulnerabilities
 To simulate common vulnerabilities, we manually introduced several issues:
 1. **Installed Telnet** (Insecure protocol)
@@ -39,7 +41,7 @@ To simulate common vulnerabilities, we manually introduced several issues:
    - [Script Link](https://github.com/cybererik/Programmatic-Remediation-in-Linux/blob/main/SCRIPT%3A%20Enable%20Password%20as%20Root)
 
 3. **Default OpenSSL** (xxxxx)
- - [Script Link](https://github.com/cybererik/Programmatic-Remediation-in-Linux/blob/main/SCRIPT%3A%20Enable%20Password%20as%20Root)
+   - [Script Link](https://github.com/cybererik/Programmatic-Remediation-in-Linux/blob/main/SCRIPT%3A%20Enable%20Password%20as%20Root)
 
 ----
 ### Step 4: Run Authenticated Scan
@@ -54,13 +56,13 @@ Run a **Authenticated Scan** on the **Azure VM** using Tenable to capture the st
 ### Step 5: Created Scripts for Programmatic Remediation
 To simulate real-world remediation in large environments, I wrote scripts to automate vulnerability remediation. The goal is to remove bad configurations automatically, without manual intervention, while testing the scripts in a sandbox environment first.
 
-1. **Remediate Telnet:**: 
+1. **Remediate Telnet**: 
    - [Script Link](https://github.com/joshmadakor1/lognpacific-public/blob/main/automation/remediation-Telnet-Remove.sh)
 
-2. **Remediate Default Root Password:**: 
+2. **Remediate Default Root Password**: 
    - [Script Link](https://github.com/joshmadakor1/lognpacific-public/blob/main/automation/remediation-root-password.sh)
 
-3. **Remediate OpenSSL:**: 
+3. **Remediate OpenSSL**: 
    - [Script Link](https://github.com/joshmadakor1/lognpacific-public/blob/main/automation/remediation-openssl-3.0.5-install.sh)
 
 
