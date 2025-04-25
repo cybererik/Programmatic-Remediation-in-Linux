@@ -42,8 +42,8 @@ To simulate common vulnerabilities, we manually introduced the following vulnera
 2. **Set Root Account Password as "root"** *(Weak Password Policy)*
    - [View Script](https://github.com/cybererik/Programmatic-Remediation-in-Linux/blob/main/SCRIPT%3A%20Enable%20Password%20as%20Root)
 
-3. **Installed an Outdated OpenSSL Version** *(Vulnerable Cryptographic Library)*
-   - [View Script](https://github.com/cybererik/Programmatic-Remediation-in-Linux/blob/main/SCRIPT%3A%20Install%20Vulnerable%20OpenSSL)
+3. **Automated OpenSSL 3.0.5 Installation and Remediation Script for Linux**
+   - [View Script](https://github.com/cybererik/Programmatic-Remediation-in-Linux/blob/main/remediation-openssl-3.0.5-install.sh)
 ----------
 ### Step 4: Run Authenticated Scan
 Run a **Authenticated Scan** on the **Azure VM** using Tenable to capture the state of the vulnerabilities. This provides a baseline before remediation.
@@ -62,8 +62,8 @@ To simulate real-world remediation in large environments, I created bash scripts
 2. **Enforce Secure Root Password Policy**
    - [View Script](https://github.com/cybererik/Programmatic-Remediation-in-Linux/blob/main/remediation-root-password.sh)
 
-3. **Upgrade OpenSSL to a Secure Version**
-   - [View Script](https://github.com/cybererik/Programmatic-Remediation-in-Linux/blob/main/remediation-openssl-update.sh)
+3. **Automated OpenSSL 3.0.5 Installation and Remediation Script for Linux**
+   - [View Script](https://github.com/cybererik/Programmatic-Remediation-in-Linux/blob/main/remediation-openssl-3.0.5-install.sh)
 ------
 ## Testing & Verification
 After running the scan post-remediation, compare the results with the previous scan to evaluate the effectiveness of the automated remediation. Successful remediation should show a reduction in the number of critical vulnerabilities, and the system should now meet security compliance standards.
